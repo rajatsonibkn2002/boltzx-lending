@@ -18,13 +18,13 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar navbar-dark bg-dark fixed-top">
+    <div className="navbar fixed-top">
       <div className="container py-2">
         <a href="/" className="navbar-brand">
-          BoltzX Lending
+          BoltzX
         </a>
         <div className="d-flex">
-          <button onClick={onConnectWallet} className="btn btn-outline-info">
+          <button onClick={onConnectWallet} className="btn wallet btn-outline-info">
             {account!=="" ? account : 'Connect Wallet'}
           </button>
         </div>

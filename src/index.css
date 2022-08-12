@@ -1,8 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 #root,
 html,
 body {
   height: 100%;
+  background-color: black;
+  margin: 0;
 }
+
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.navbar {
+  flex: 0 1 auto;
+  font-family: 'Silkscreen';
+  background-color: transparent;
+  margin-left: 0;
+  padding-left: 0;
+}
+.navbar-brand {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+}
+
 .btn {
-  margin-bottom: 10px;
+  color: #0a58ca;
+  border-color: #0a58ca;
+}
+
+.btn-lend, .btn-withdraw {
+  color: #0a58ca;
+  background-color: transparent;
+  font-family: 'Silkscreen';
+  border-color: white;
+}
+
+.wallet {
+  border-color: white;
+}
+
+.btn-lend:hover, .btn-withdraw:hover, .wallet:hover {
+  background-color: #0a58ca;
+  border-color: white;
+  color: black;
+}
+
+.btns {
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+
+.balance {
+  color: #0a58ca;
+  text-transform: capitalize;
+  font-family: 'Silkscreen';
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.footer {
+  color: white;
+  font-family: 'Silkscreen';
+  text-align: center;
+  flex: 0 1 40px;
 }
