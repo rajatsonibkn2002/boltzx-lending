@@ -1,4 +1,9 @@
 
+# BoltzX Lending Platform
+
+A decentralized lending platform on tezos blockchain.
+
+
 ## Run Locally
 
 Clone the project
