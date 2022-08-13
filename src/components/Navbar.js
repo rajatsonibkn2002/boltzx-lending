@@ -25,7 +25,7 @@ const Navbar = () => {
         </a>
         <div className="d-flex">
           <button onClick={onConnectWallet} className="btn wallet btn-outline-info">
-            {account!=="" ? account : 'Connect Wallet'}
+            {account!=="" ? account : 'CONNECT WALLET'}
           </button>
         </div>
       </div>
