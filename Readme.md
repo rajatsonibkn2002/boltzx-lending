@@ -1,9 +1,4 @@
 
-# BoltzX Lending Platform
-
-A decentralized lending platform on tezos blockchain.
-
-
 ## Run Locally
 
 Clone the project
@@ -36,3 +31,4 @@ Start the server
 
 ## Description
 We have lending functionality on our dapp, where you can lend any amount of tez. Also, you can withdraw your tez anytime with some interest with it.
+You can checkout our application [here](https://boltzx.netlify.app/)
