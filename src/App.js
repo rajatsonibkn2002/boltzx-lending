@@ -23,17 +23,23 @@ const App = () => {
   const updateBalance = async () => {
     const storage = await fetchStorage();
     const activeAccount = await getAccount();
-    return storage.data.lenders[activeAccount]
+    return storage.data.lenders[activeAccount]/1000000
   }
 
   const onLendMoney = async () => {
     try{
       setLendLoading(true);
       await lendMoneyOperation();
-      setBalance(await updateBalance());
+      const bal = await updateBalance()
+      setBalance(bal);
       alert("Transaction Confirmed!");
     } catch(err){
-      alert("Transaction Failed: ", err.message);
+      const activeAccount = await getAccount();
+      if(activeAccount === "") {
+        alert("Please Connect Wallet!");
+      } else {
+        alert("Transaction Failed: ", err.message);
+      }
     }
     setLendLoading(false);
   };
@@ -42,16 +48,22 @@ const App = () => {
     try {
       setWithdrawLoading(true);
       await withdrawMoneyOperation();
-      setBalance(await updateBalance());
+      const bal = await updateBalance();
+      setBalance(bal);
       alert("Transaction Confirmed!");
     } catch (err) {
-      alert("Transaction Failed: ", err.message);
+      const activeAccount = await getAccount();
+      if(activeAccount === "") {
+        alert("Please Connect Wallet!");
+      } else {
+        alert("Transaction Failed: ", err.message);
+      }
     }
     setWithdrawLoading(false);
   };
 
   return (
-    <div className="box h-100">
+    <div className="box">
       <Navbar />
       <div className="content">
         <div className="d-flex align-items-center h-100 btns">
@@ -63,8 +75,8 @@ const App = () => {
             { withdrawLoading === true ? "LOADING..." : "WITHDRAW" }
           </button>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };
