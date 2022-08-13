@@ -38,7 +38,7 @@ const App = () => {
       if(activeAccount === "") {
         alert("Please Connect Wallet!");
       } else {
-        alert("Transaction Failed: ", err.message);
+        alert(err);
       }
     }
     setLendLoading(false);
@@ -56,7 +56,7 @@ const App = () => {
       if(activeAccount === "") {
         alert("Please Connect Wallet!");
       } else {
-        alert("Transaction Failed: ", err.message);
+        alert(err);
       }
     }
     setWithdrawLoading(false);
